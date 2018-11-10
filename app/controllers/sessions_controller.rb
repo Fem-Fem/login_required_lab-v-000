@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
 
-
-
   def create
-    # binding.pry
     return redirect_to(controller: 'sessions', action: 'new') if !params[:name] || params[:name].empty?
     session[:name] = params[:name]
   end
